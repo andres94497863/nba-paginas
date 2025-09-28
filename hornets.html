@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charlotte Hornets</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("https://www.hornetspremium.com/wp-content/uploads/2025/04/HORNETS-PREMIUM-MAIN-IMG-1200X675.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+    }
+
+    header {
+      background-color: #1D1160;
+      color: #00A78E;
+      text-align: center;
+      padding: 20px;
+    }
+    header img {
+      height: 80px;
+    }
+    nav {
+      background-color: #00788C;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    h2 {
+      color: #00A78E;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #1D1160;
+      color: #00A78E;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    .button {
+      background-color: #00788C;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #00A78E;
+    }
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .day {
+      padding: 15px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid #ccc;
+      cursor: pointer;
+      border-radius: 5px;
+      color: white;
+    }
+    .day:hover {
+      background: #00788C;
+      color: white;
+    }
+    .event {
+      background: #00788C;
+      color: white;
+      font-weight: bold;
+    }
+    #detalle {
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(0,0,0,0.7);
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      display: none;
+      color: white;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: rgba(0,0,0,0.6);
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+    th {
+      background-color: #00788C;
+      color: white;
+    }
+    td img {
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    td img:hover {
+      transform: scale(1.1);
+    }
+    .noticias-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .noticia {
+      background: rgba(0,0,0,0.6);
+      border: 1px solid #00788C;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .noticia:hover {
+      transform: scale(1.05);
+      background: rgba(0,120,140,0.7);
+    }
+    .noticia img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="https://www.instagram.com/hornets" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg" alt="Hornets Logo" width="200">
+  </a>
+  <h1>Charlotte Hornets</h1>
+  <p>luchamos en cada juego</p>
+</header>
+
+<nav>
+  <a href="#" onclick="mostrarSeccion('historia')">Historia</a>
+  <a href="#" onclick="mostrarSeccion('cronograma')">Cronograma de Juegos</a>
+  <a href="#" onclick="mostrarSeccion('plantilla')">Plantilla Actual</a>
+  <a href="#" onclick="mostrarSeccion('noticias')">Noticias</a>
+</nav>
+
+<section id="historia" class="active">
+  <h2>Historia</h2>
+  <p>
+    Los Charlotte Hornets nacieron en 1988 y rápidamente se convirtieron en un equipo muy querido en Carolina del Norte. 
+    Conocidos por su identidad "Buzz City", han tenido grandes estrellas como Larry Johnson, Alonzo Mourning y Kemba Walker.
+  </p>
+  <h2>Jugadores Legendarios</h2>
+  <ul>
+    <li>Larry Johnson</li>
+    <li>Alonzo Mourning</li>
+    <li>Glen Rice</li>
+    <li>Kemba Walker</li>
+    <li>Muggsy Bogues</li>
+  </ul>
+  <h2>Galería</h2>
+  <div class="gallery">
+    <img src="https://cdn.nba.com/logos/nba/1610612766/primary/L/logo.svg" alt="Hornets Logo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXGTMjS0rgP60zi8DWkOTf4JRUJ4dpRZOUYQ&s" alt="Alonzo Mournin">
+    <img src="https://vz.cnwimg.com/wp-content/uploads/2018/10/kem.jpg" alt="Kemba Walker">
+  </div>
+  <h2>Frase motivadora</h2>
+  <button class="button" onclick="mostrarMensaje()">Haz clic aquí</button>
+  <p id="mensaje"></p>
+</section>
+
+<section id="cronograma">
+  <h2>Cronograma de Partidos</h2>
+  <p>Haz clic en las fechas para ver los partidos:</p>
+  <div class="calendar">
+    <div class="day event" onclick="mostrarEvento('01/10/2025 - Hornets vs Hawks, 7:30 PM')">1</div>
+    <div class="day event" onclick="mostrarEvento('04/10/2025 - Hornets vs Nets, 7:00 PM')">4</div>
+    <div class="day event" onclick="mostrarEvento('08/10/2025 - Hornets vs Knicks, 7:30 PM')">8</div>
+    <div class="day event" onclick="mostrarEvento('13/10/2025 - Hornets vs Wizards, 7:00 PM')">13</div>
+    <div class="day event" onclick="mostrarEvento('18/10/2025 - Hornets vs Heat, 7:30 PM')">18</div>
+    <div class="day event" onclick="mostrarEvento('22/10/2025 - Hornets vs 76ers, 8:00 PM')">22</div>
+    <div class="day event" onclick="mostrarEvento('27/10/2025 - Hornets vs Bucks, 6:00 PM')">27</div>
+    <div class="day event" onclick="mostrarEvento('31/10/2025 - Hornets vs Celtics, 7:30 PM (Noche de Halloween )')">31</div>
+  </div>
+  <div id="detalle"></div>
+</section>
+
+<section id="plantilla">
+  <h2>Plantilla Actual 2025</h2>
+  <table>
+    <tr><th>Foto</th><th>Jugador</th><th>Posición</th><th>Número</th></tr>
+    <tr><td><img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1630163.png" width="80"></td><td>LaMelo Ball</td><td>Base</td><td>#1</td></tr>
+    <tr><td><img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4433287.png" width="80"></td><td>Brandon Miller</td><td>Alero</td><td>#24</td></tr>
+    <tr><td><img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066383.png" width="80"></td><td>Miles Bridges</td><td>Alero</td><td>#0</td></tr>
+    <tr><td><img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278078.png" width="80"></td><td>P.J. Washington</td><td>Ala-Pívot</td><td>#25</td></tr>
+  </table>
+</section>
+
+<section id="noticias">
+  <h2>Noticias de los Hornets 2025</h2>
+  <div id="noticias-container" class="noticias-container"></div>
+</section>
+
+<script>
+  function mostrarMensaje() {
+    document.getElementById("mensaje").innerText = " nunca duerme siempre luchamos";
+  }
+
+  function mostrarSeccion(id) {
+    const secciones = document.querySelectorAll("section");
+    secciones.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+
+  function mostrarEvento(texto) {
+    const detalle = document.getElementById("detalle");
+    detalle.style.display = "block";
+    detalle.innerText = texto;
+  }
+
+  const noticias = [
+    {
+      titulo: "LaMelo regresa con fuerza",
+      descripcion: "La estrella de los Hornets vuelve tras lesión y busca liderar a su equipo a los playoffs.",
+      imagen: "https://cdn.nba.com/headshots/nba/latest/1040x760/1630163.png",
+    },
+    {
+      titulo: "Brandon Miller sigue brillando",
+      descripcion: "El joven alero demuestra ser una pieza fundamental para el futuro de Charlotte.",
+      imagen: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4433287.png",
+    }
+  ];
+
+  function cargarNoticias() {
+    const contenedor = document.getElementById("noticias-container");
+    contenedor.innerHTML = "";
+    noticias.forEach(noticia => {
+      const div = document.createElement("div");
+      div.classList.add("noticia");
+      div.innerHTML = `
+        <img src="${noticia.imagen}" alt="${noticia.titulo}">
+        <h3>${noticia.titulo}</h3>
+        <p>${noticia.descripcion}</p>
+      `;
+      contenedor.appendChild(div);
+    });
+  }
+
+  window.onload = cargarNoticias;
+</script>
+
+</body>
+</html>

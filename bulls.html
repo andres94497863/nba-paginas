@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicago Bulls</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("https://wallpapers.com/images/featured/chicago-bulls-u40a79pcvprb4rrg.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+    }
+
+    header {
+      background-color: #CE1141; /* Rojo Bulls */
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    header img {
+      height: 80px;
+    }
+    nav {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: #CE1141;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    h2 {
+      color: #CE1141;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #CE1141;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    .button {
+      background-color: #CE1141;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #a00d31;
+    }
+    /* Estilo calendario */
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .day {
+      padding: 15px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid #ccc;
+      cursor: pointer;
+      border-radius: 5px;
+      color: white;
+    }
+    .day:hover {
+      background: #CE1141;
+      color: white;
+    }
+    .event {
+      background: #CE1141;
+      color: white;
+      font-weight: bold;
+    }
+    #detalle {
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(0,0,0,0.7);
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      display: none;
+      color: white;
+    }
+    /* Estilos tabla plantilla */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: rgba(0,0,0,0.6);
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+    th {
+      background-color: #CE1141;
+      color: white;
+    }
+    td img {
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    td img:hover {
+      transform: scale(1.1);
+    }
+    /* Estilos Noticias */
+    .noticias-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .noticia {
+      background: rgba(0,0,0,0.6);
+      border: 1px solid #CE1141;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .noticia:hover {
+      transform: scale(1.05);
+      background: rgba(206,17,65,0.7);
+    }
+    .noticia img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="https://www.instagram.com/chicagobulls" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/en/6/67/Chicago_Bulls_logo.svg" alt="Bulls Logo" width="200">
+    </a>
+    <h1>Chicago Bulls</h1>
+    <p>No es lo mismo tener talento que trabajar para ser una leyenda</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="mostrarSeccion('historia')">Historia</a>
+    <a href="#" onclick="mostrarSeccion('cronograma')">Cronograma de Juegos</a>
+    <a href="#" onclick="mostrarSeccion('plantilla')">Plantilla Actual</a>
+    <a href="#" onclick="mostrarSeccion('noticias')">Noticias</a>
+  </nav>
+
+  <section id="historia" class="active">
+    <h2>Historia</h2>
+    <p>
+      Los Chicago Bulls son uno de los equipos más icónicos de la NBA. Fundados en 1966, dominaron la década de los 90 con Michael Jordan, Scottie Pippen y Dennis Rodman, ganando 6 campeonatos en 8 años. Su logo es uno de los más reconocidos en el mundo del deporte.
+    </p>
+    <h2>Jugadores Legendarios</h2>
+    <ul>
+      <li>Michael Jordan</li>
+      <li>Scottie Pippen</li>
+      <li>Dennis Rodman</li>
+      <li>Derrick Rose</li>
+      <li>Joakim Noah</li>
+    </ul>
+    <h2>Galería</h2>
+    <div class="gallery">
+      <img src="https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg" alt="Bulls Logo">
+      <img src="https://cdn.nba.com/manage/2021/08/michael-jordan-looks.jpg" alt="Michael Jordan">
+      <img src="https://www.elplural.com/uploads/s1/20/60/92/0/scottie-pippen-nba.jpeg" alt="Scottie Pippen">
+    </div>
+    <h2>Frase motivadora</h2>
+    <button class="button" onclick="mostrarMensaje()">Haz clic aquí</button>
+    <p id="mensaje"></p>
+  </section>
+
+  <section id="cronograma">
+    <h2>Cronograma de Partidos</h2>
+    <p>Haz clic en las fechas para ver los partidos:</p>
+    <div class="calendar">
+      <div class="day event" onclick="mostrarEvento('02/10/2025 - Bulls vs Bucks, 7:30 PM')">2</div>
+      <div class="day event" onclick="mostrarEvento('05/10/2025 - Bulls vs Heat, 7:00 PM')">5</div>
+      <div class="day event" onclick="mostrarEvento('10/10/2025 - Bulls vs Cavaliers, 7:30 PM')">10</div>
+      <div class="day event" onclick="mostrarEvento('15/10/2025 - Bulls vs Knicks, 7:30 PM')">15</div>
+      <div class="day event" onclick="mostrarEvento('20/10/2025 - Bulls vs Celtics, 7:00 PM')">20</div>
+      <div class="day event" onclick="mostrarEvento('25/10/2025 - Bulls vs Lakers, 7:30 PM')">25</div>
+      <div class="day event" onclick="mostrarEvento('29/10/2025 - Bulls vs Pacers, 7:30 PM')">29</div>
+    </div>
+    <div id="detalle"></div>
+  </section>
+
+  <section id="plantilla">
+    <h2>Plantilla Actual 2025</h2>
+    <table>
+      <tr><th>Foto</th><th>Jugador</th><th>Posición</th><th>Número</th></tr>
+      <tr><td><img src="https://b.fssta.com/uploads/application/nba/headshots/1913.vresize.350.350.medium.1.png" width="80"></td><td>Zach LaVine</td><td>Escolta</td><td>#8</td></tr>
+      <tr><td><img src="https://b.fssta.com/uploads/application/nba/headshots/1584.vresize.350.350.medium.1.png" width="80"></td><td>DeMar DeRozan</td><td>Alero</td><td>#11</td></tr>
+      <tr><td><img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395651.png" width="100"></td><td>Coby White</td><td>Base</td><td>#0</td></tr>
+      <tr><td><img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6478.png" width="100"></td><td>Nikola Vučević</td><td>Pívot</td><td>#9</td></tr>
+    </table>
+  </section>
+
+  <section id="noticias">
+    <h2>Noticias de los Bulls 2025</h2>
+    <div id="noticias-container" class="noticias-container"></div>
+  </section>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById("mensaje").innerText = "El esfuerzo supera al talento cuando el talento no se esfuerza.";
+    }
+
+    function mostrarSeccion(id) {
+      const secciones = document.querySelectorAll("section");
+      secciones.forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+
+    function mostrarEvento(texto) {
+      const detalle = document.getElementById("detalle");
+      detalle.style.display = "block";
+      detalle.innerText = texto;
+    }
+
+    const noticias = [
+      {
+        titulo: "Zach LaVine anota 50 puntos",
+        descripcion: "LaVine tuvo su mejor partido de la temporada y llevó a Chicago a la victoria contra los Knicks.",
+        imagen: "https://b.fssta.com/uploads/application/nba/headshots/1913.vresize.350.350.medium.1.png",
+      },
+      {
+        titulo: "DeRozan en modo clutch",
+        descripcion: "DeRozan sigue siendo uno de los jugadores más decisivos en el último cuarto.",
+        imagen: "https://cdn.nba.com/headshots/nba/latest/1040x760/201942.png",
+      }
+    ];
+
+    function cargarNoticias() {
+      const contenedor = document.getElementById("noticias-container");
+      contenedor.innerHTML = "";
+      noticias.forEach(noticia => {
+        const div = document.createElement("div");
+        div.classList.add("noticia");
+        div.innerHTML = `
+          <img src="${noticia.imagen}" alt="${noticia.titulo}">
+          <h3>${noticia.titulo}</h3>
+          <p>${noticia.descripcion}</p>
+        `;
+        contenedor.appendChild(div);
+      });
+    }
+
+    window.onload = cargarNoticias;
+  </script>
+
+</body>
+</html>
